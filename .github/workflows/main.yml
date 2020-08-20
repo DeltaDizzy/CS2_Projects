@@ -35,4 +35,4 @@ jobs:
       uses: actions/upload-artifact@v2.1.4
       with: 
         name: ForLoopsChallenge
-        path: FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
+        path: FORLOOPSCHALLENGE/FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
