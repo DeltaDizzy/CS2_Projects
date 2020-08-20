@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Build ForLoopsChallenge
+name: Build Current Project
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -28,5 +28,11 @@ jobs:
     - name: Restore NuGet Packages
       run: nuget restore FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln
       
-    - name: Build and Publish Web App
+    - name: Build App
       run: msbuild FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln /p:Configuration=Debug
+    
+    - name: Upload Artifact
+      uses: actions/upload-artiface@v2.1.4
+      with: 
+        name: ForLoopsChallenge
+        path: FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
