@@ -1,0 +1,10 @@
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\bin\Debug\GetMeOuttaHere.exe.config
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\bin\Debug\GetMeOuttaHere.exe
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\bin\Debug\GetMeOuttaHere.pdb
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\obj\Debug\GetMeOuttaHere.csprojAssemblyReference.cache
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\obj\Debug\GetMeOuttaHere.Form1.resources
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\obj\Debug\GetMeOuttaHere.Properties.Resources.resources
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\obj\Debug\GetMeOuttaHere.csproj.GenerateResource.cache
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\obj\Debug\GetMeOuttaHere.csproj.CoreCompileInputs.cache
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\obj\Debug\GetMeOuttaHere.exe
+C:\Users\SmithFamily\source\repos\GetMeOuttaHere\GetMeOuttaHere\obj\Debug\GetMeOuttaHere.pdb

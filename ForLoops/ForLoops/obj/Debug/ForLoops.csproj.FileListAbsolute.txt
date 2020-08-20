@@ -1,0 +1,10 @@
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\obj\Debug\ForLoops.csprojAssemblyReference.cache
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\obj\Debug\ForLoops.Form1.resources
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\obj\Debug\ForLoops.Properties.Resources.resources
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\obj\Debug\ForLoops.csproj.GenerateResource.cache
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\obj\Debug\ForLoops.csproj.CoreCompileInputs.cache
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\bin\Debug\ForLoops.exe.config
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\bin\Debug\ForLoops.exe
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\bin\Debug\ForLoops.pdb
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\obj\Debug\ForLoops.exe
+E:\CS2-PROJECTS\CSHARP\ForLoops\ForLoops\obj\Debug\ForLoops.pdb

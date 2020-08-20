@@ -1,0 +1,10 @@
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\bin\Debug\CSharpSyntax.exe.config
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\bin\Debug\CSharpSyntax.exe
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\bin\Debug\CSharpSyntax.pdb
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\obj\Debug\CSharpSyntax.csprojAssemblyReference.cache
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\obj\Debug\CSharpSyntax.Form1.resources
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\obj\Debug\CSharpSyntax.Properties.Resources.resources
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\obj\Debug\CSharpSyntax.csproj.GenerateResource.cache
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\obj\Debug\CSharpSyntax.csproj.CoreCompileInputs.cache
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\obj\Debug\CSharpSyntax.exe
+E:\CS2-PROJECTS\CSHARP\CSharpSyntax\CSharpSyntax\obj\Debug\CSharpSyntax.pdb

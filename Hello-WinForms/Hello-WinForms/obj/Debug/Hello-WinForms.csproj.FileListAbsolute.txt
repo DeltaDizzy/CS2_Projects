@@ -1,0 +1,10 @@
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\bin\Debug\Hello-WinForms.exe.config
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\bin\Debug\Hello-WinForms.exe
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\bin\Debug\Hello-WinForms.pdb
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\obj\Debug\Hello-WinForms.csprojAssemblyReference.cache
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\obj\Debug\Hello_WinForms.Form1.resources
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\obj\Debug\Hello_WinForms.Properties.Resources.resources
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\obj\Debug\Hello-WinForms.csproj.GenerateResource.cache
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\obj\Debug\Hello-WinForms.csproj.CoreCompileInputs.cache
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\obj\Debug\Hello-WinForms.exe
+E:\CS2-PROJECTS\CSHARP\Hello-WinForms\Hello-WinForms\obj\Debug\Hello-WinForms.pdb
