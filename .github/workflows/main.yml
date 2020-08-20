@@ -32,7 +32,7 @@ jobs:
       run: msbuild FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln /p:Configuration=Debug
     
     - name: Upload Artifact
-      uses: actions/upload-artiface@v2.1.4
+      uses: actions/upload-artifact@v2.1.4
       with: 
         name: ForLoopsChallenge
         path: FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
