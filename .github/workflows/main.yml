@@ -9,7 +9,7 @@ on: [push]
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  ForLoopsChallenge:
+  Countdown:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -34,9 +34,9 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
-        name: ForLoopsChallenge.exe
+        name: Countdown.exe
         path: FORLOOPSCHALLENGE/FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
-  Sudoku:
+  Magic Square:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -63,3 +63,30 @@ jobs:
       with: 
         name: MagicSquare.exe
         path: CSharpSyntax/CSharpSyntax/obj/Debug/CSharpSyntax.exe
+  Fibonacci:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+      name: Checkout Code
+      
+    - name: Setup MSBuild Path
+      uses: warrenbuckley/Setup-MSBuild@v1
+    
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+    
+    - name: Restore NuGet Packages
+      run: nuget restore ForLoopFibonacci/ForLoopFibonacci.sln
+      
+    - name: Build App
+      run: msbuild ForLoopFibonacci/ForLoopFibonacci.sln /p:Configuration=Debug
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2.1.4
+      with: 
+        name: Fibonacci.exe
+        path: ForLoopFibonacci/ForLoopFibonacci/obj/DebugForLoopFibonacci.exe
