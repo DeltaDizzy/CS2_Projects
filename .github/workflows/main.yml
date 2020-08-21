@@ -62,4 +62,4 @@ jobs:
       uses: actions/upload-artifact@v2.1.4
       with: 
         name: MagicSquare.exe
-        path: CSharpSyntax/CSharpSyntax.sln/obj/Debug/CSharpSyntax.exe
+        path: CSharpSyntax/CSharpSyntax/obj/Debug/CSharpSyntax.exe
