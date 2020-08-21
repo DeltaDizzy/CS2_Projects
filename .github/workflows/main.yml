@@ -89,4 +89,4 @@ jobs:
       uses: actions/upload-artifact@v2.1.4
       with: 
         name: Fibonacci.exe
-        path: ForLoopFibonacci/ForLoopFibonacci/obj/DebugForLoopFibonacci.exe
+        path: ForLoopFibonacci/ForLoopFibonacci/obj/Debug/ForLoopFibonacci.exe
