@@ -34,7 +34,7 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
-        name: ForLoopsChallenge
+        name: ForLoopsChallenge.exe
         path: FORLOOPSCHALLENGE/FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
   Sudoku:
     # The type of runner that the job will run on
@@ -61,5 +61,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
-        name: MagicSquare
+        name: MagicSquare.exe
         path: CSharpSyntax/CSharpSyntax.sln/obj/Debug/CSharpSyntax.exe
