@@ -116,5 +116,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
-        name: Fibonacci.exe
+        name: NaturalNumbers.exe
         path: NaturalNumbers/NaturalNumbers/obj/Debug/NaturalNumbers.exe
