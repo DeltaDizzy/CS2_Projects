@@ -118,3 +118,30 @@ jobs:
       with: 
         name: NaturalNumbers.exe
         path: NaturalNumbers/NaturalNumbers/obj/Debug/NaturalNumbers.exe
+  DiceRoll:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+      name: Checkout Code
+      
+    - name: Setup MSBuild Path
+      uses: warrenbuckley/Setup-MSBuild@v1
+    
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+    
+    - name: Restore NuGet Packages
+      run: nuget restore DiceOdds/DiceOdds.sln
+      
+    - name: Build App
+      run: msbuild DiceOdds/DiceOdds.sln /p:Configuration=Debug
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2.1.4
+      with: 
+        name: DiceRoll.exe
+        path: DiceOdds/DiceOdds/obj/Debug/DiceOdds.exe
