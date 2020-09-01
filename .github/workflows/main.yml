@@ -118,7 +118,7 @@ jobs:
       with: 
         name: NaturalNumbers.exe
         path: NaturalNumbers/NaturalNumbers/obj/Debug/NaturalNumbers.exe
-  DiceRoll:
+  DiceGame:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -135,13 +135,13 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.2
     
     - name: Restore NuGet Packages
-      run: nuget restore DiceOdds/DiceOdds.sln
+      run: nuget restore DiceGame/DiceGame.sln
       
     - name: Build App
-      run: msbuild DiceOdds/DiceOdds.sln /p:Configuration=Debug
+      run: msbuild DiceGame/DiceGame.sln /p:Configuration=Debug
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
-        name: DiceRoll.exe
-        path: DiceOdds/DiceOdds/obj/Debug/DiceOdds.exe
+        name: DiceGame.exe
+        path: DiceGame/DiceGame/obj/Debug/DiceGame.exe
