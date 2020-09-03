@@ -38,6 +38,7 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTurns = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbDice0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDice2)).BeginInit();
@@ -140,11 +141,22 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Bank:";
             // 
+            // lblTurns
+            // 
+            this.lblTurns.AutoSize = true;
+            this.lblTurns.Font = new System.Drawing.Font("Rough Draft", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurns.Location = new System.Drawing.Point(382, 206);
+            this.lblTurns.Name = "lblTurns";
+            this.lblTurns.Size = new System.Drawing.Size(146, 35);
+            this.lblTurns.TabIndex = 10;
+            this.lblTurns.Text = "Turns: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 450);
+            this.Controls.Add(this.lblTurns);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblScore);
@@ -179,6 +191,7 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTurns;
     }
 }
 

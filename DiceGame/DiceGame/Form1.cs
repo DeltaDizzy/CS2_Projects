@@ -19,6 +19,7 @@ namespace DiceGame
 
         int sum = 0;
         int score = 2000;
+        int turns = 0;
 
         public Form1()
         {
@@ -64,6 +65,8 @@ namespace DiceGame
                 UpdateScore();
             }
             sum = 0;
+            turns++;
+            lblTurns.Text = $"Turns: {turns}";
         }
 
         private void UpdateScore()
