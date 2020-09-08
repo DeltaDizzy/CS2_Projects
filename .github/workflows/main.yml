@@ -11,165 +11,165 @@ jobs:
     # This workflow contains a single job called "build"
     Countdown:
     # The type of runner that the job will run on
-    runs-on: windows-latest
+        runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      name: Checkout Code
-      
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+          name: Checkout Code
+          
+        - name: Setup MSBuild Path
+          uses: warrenbuckley/Setup-MSBuild@v1
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.2
 
-    - name: Restore NuGet Packages
-      run: nuget restore FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln
-      
-    - name: Build App
-      run: msbuild FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln /p:Configuration=Debug
+        - name: Restore NuGet Packages
+          run: nuget restore FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln
+          
+        - name: Build App
+          run: msbuild FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln /p:Configuration=Debug
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2.1.4
-      with: 
-        name: Countdown.exe
-        path: FORLOOPSCHALLENGE/FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v2.1.4
+          with: 
+            name: Countdown.exe
+            path: FORLOOPSCHALLENGE/FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
     MagicSquare:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
+        # The type of runner that the job will run on
+        runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      name: Checkout Code
-      
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+          name: Checkout Code
+          
+        - name: Setup MSBuild Path
+          uses: warrenbuckley/Setup-MSBuild@v1
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.2
 
-    - name: Restore NuGet Packages
-      run: nuget restore CSharpSyntax/CSharpSyntax.sln
-      
-    - name: Build App
-      run: msbuild CSharpSyntax/CSharpSyntax.sln /p:Configuration=Debug
+        - name: Restore NuGet Packages
+          run: nuget restore CSharpSyntax/CSharpSyntax.sln
+          
+        - name: Build App
+          run: msbuild CSharpSyntax/CSharpSyntax.sln /p:Configuration=Debug
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2.1.4
-      with: 
-        name: MagicSquare.exe
-        path: CSharpSyntax/CSharpSyntax/obj/Debug/CSharpSyntax.exe
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v2.1.4
+          with: 
+            name: MagicSquare.exe
+            path: CSharpSyntax/CSharpSyntax/obj/Debug/CSharpSyntax.exe
     Fibonacci:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
+        # The type of runner that the job will run on
+        runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      name: Checkout Code
-      
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+          name: Checkout Code
+          
+        - name: Setup MSBuild Path
+          uses: warrenbuckley/Setup-MSBuild@v1
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.2
 
-    - name: Restore NuGet Packages
-      run: nuget restore ForLoopFibonacci/ForLoopFibonacci.sln
-      
-    - name: Build App
-      run: msbuild ForLoopFibonacci/ForLoopFibonacci.sln /p:Configuration=Debug
+        - name: Restore NuGet Packages
+          run: nuget restore ForLoopFibonacci/ForLoopFibonacci.sln
+          
+        - name: Build App
+          run: msbuild ForLoopFibonacci/ForLoopFibonacci.sln /p:Configuration=Debug
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2.1.4
-      with: 
-        name: Fibonacci.exe
-        path: ForLoopFibonacci/ForLoopFibonacci/obj/Debug/ForLoopFibonacci.exe
-        
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v2.1.4
+          with: 
+            name: Fibonacci.exe
+            path: ForLoopFibonacci/ForLoopFibonacci/obj/Debug/ForLoopFibonacci.exe
+            
     NaturalNumbers:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
+        # The type of runner that the job will run on
+        runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      name: Checkout Code
-      
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+          name: Checkout Code
+          
+        - name: Setup MSBuild Path
+          uses: warrenbuckley/Setup-MSBuild@v1
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.2
 
-    - name: Restore NuGet Packages
-      run: nuget restore NaturalNumbers/NaturalNumbers.sln
-      
-    - name: Build App
-      run: msbuild NaturalNumbers/NaturalNumbers.sln /p:Configuration=Debug
+        - name: Restore NuGet Packages
+          run: nuget restore NaturalNumbers/NaturalNumbers.sln
+          
+        - name: Build App
+          run: msbuild NaturalNumbers/NaturalNumbers.sln /p:Configuration=Debug
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2.1.4
-      with: 
-        name: NaturalNumbers.exe
-        path: NaturalNumbers/NaturalNumbers/obj/Debug/NaturalNumbers.exe
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v2.1.4
+          with: 
+            name: NaturalNumbers.exe
+            path: NaturalNumbers/NaturalNumbers/obj/Debug/NaturalNumbers.exe
     DiceGame:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
+        # The type of runner that the job will run on
+        runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      name: Checkout Code
-      
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+          name: Checkout Code
+          
+        - name: Setup MSBuild Path
+          uses: warrenbuckley/Setup-MSBuild@v1
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.2
 
-    - name: Restore NuGet Packages
-      run: nuget restore DiceGame/DiceGame.sln
-      
-    - name: Build App
-      run: msbuild DiceGame/DiceGame.sln /p:Configuration=Debug
+        - name: Restore NuGet Packages
+          run: nuget restore DiceGame/DiceGame.sln
+          
+        - name: Build App
+          run: msbuild DiceGame/DiceGame.sln /p:Configuration=Debug
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2.1.4
-      with: 
-        name: DiceGame.exe
-        path: DiceGame/DiceGame/obj/Debug/DiceGame.exe
-        
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v2.1.4
+          with: 
+            name: DiceGame.exe
+            path: DiceGame/DiceGame/obj/Debug/DiceGame.exe
+            
     DataMgt:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
+        # The type of runner that the job will run on
+        runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-      name: Checkout Code
-      
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v2
+          name: Checkout Code
+          
+        - name: Setup MSBuild Path
+          uses: warrenbuckley/Setup-MSBuild@v1
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.2
 
-    - name: Restore NuGet Packages
-      run: nuget restore DataMgt/DataMgt.sln
-      
-    - name: Build App
-      run: msbuild DataMgt/DataMgt.sln /p:Configuration=Debug
+        - name: Restore NuGet Packages
+          run: nuget restore DataMgt/DataMgt.sln
+          
+        - name: Build App
+          run: msbuild DataMgt/DataMgt.sln /p:Configuration=Debug
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2.1.4
-      with: 
-        name: DataMgt.exe
-        path: DataMgt/DataMgt/obj/Debug/DataMgt.exe
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v2.1.4
+          with: 
+            name: DataMgt.exe
+            path: DataMgt/DataMgt/obj/Debug/DataMgt.exe
