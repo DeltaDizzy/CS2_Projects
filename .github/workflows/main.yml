@@ -8,8 +8,8 @@ on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  Countdown:
+    # This workflow contains a single job called "build"
+    Countdown:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -21,22 +21,22 @@ jobs:
       
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
-    
+
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
-    
+
     - name: Restore NuGet Packages
       run: nuget restore FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln
       
     - name: Build App
       run: msbuild FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln /p:Configuration=Debug
-    
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
         name: Countdown.exe
         path: FORLOOPSCHALLENGE/FORLOOPSCHALLENGE/obj/Debug/FORLOOPSCHALLENGE.exe
-  MagicSquare:
+    MagicSquare:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -48,22 +48,22 @@ jobs:
       
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
-    
+
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
-    
+
     - name: Restore NuGet Packages
       run: nuget restore CSharpSyntax/CSharpSyntax.sln
       
     - name: Build App
       run: msbuild CSharpSyntax/CSharpSyntax.sln /p:Configuration=Debug
-    
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
         name: MagicSquare.exe
         path: CSharpSyntax/CSharpSyntax/obj/Debug/CSharpSyntax.exe
-  Fibonacci:
+    Fibonacci:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -75,23 +75,23 @@ jobs:
       
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
-    
+
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
-    
+
     - name: Restore NuGet Packages
       run: nuget restore ForLoopFibonacci/ForLoopFibonacci.sln
       
     - name: Build App
       run: msbuild ForLoopFibonacci/ForLoopFibonacci.sln /p:Configuration=Debug
-    
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
         name: Fibonacci.exe
         path: ForLoopFibonacci/ForLoopFibonacci/obj/Debug/ForLoopFibonacci.exe
         
-  NaturalNumbers:
+    NaturalNumbers:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -103,22 +103,22 @@ jobs:
       
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
-    
+
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
-    
+
     - name: Restore NuGet Packages
       run: nuget restore NaturalNumbers/NaturalNumbers.sln
       
     - name: Build App
       run: msbuild NaturalNumbers/NaturalNumbers.sln /p:Configuration=Debug
-    
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
         name: NaturalNumbers.exe
         path: NaturalNumbers/NaturalNumbers/obj/Debug/NaturalNumbers.exe
-  DiceGame:
+    DiceGame:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -130,16 +130,16 @@ jobs:
       
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
-    
+
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
-    
+
     - name: Restore NuGet Packages
       run: nuget restore DiceGame/DiceGame.sln
       
     - name: Build App
       run: msbuild DiceGame/DiceGame.sln /p:Configuration=Debug
-    
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
@@ -158,16 +158,16 @@ jobs:
       
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
-    
+
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
-    
+
     - name: Restore NuGet Packages
       run: nuget restore DataMgt/DataMgt.sln
       
     - name: Build App
       run: msbuild DataMgt/DataMgt.sln /p:Configuration=Debug
-    
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v2.1.4
       with: 
