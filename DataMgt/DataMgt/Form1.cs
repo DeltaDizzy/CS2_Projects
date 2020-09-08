@@ -76,5 +76,11 @@ namespace DataMgt
                 lstList.Items.Add(word);
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lstList.Items.Clear();
+            dataList.Clear();
+        }
     }
 }

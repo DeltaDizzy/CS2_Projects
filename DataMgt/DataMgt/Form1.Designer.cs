@@ -36,6 +36,7 @@
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnReverseSort = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -121,12 +122,24 @@
             this.btnReverseSort.UseVisualStyleBackColor = true;
             this.btnReverseSort.Click += new System.EventHandler(this.btnReverseSort_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(18, 182);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(236, 42);
+            this.btnClear.TabIndex = 8;
+            this.btnClear.Text = "Clear List";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 239);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnReverseSort);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnRemoveItem);
@@ -137,7 +150,7 @@
             this.Controls.Add(this.label1);
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form5";
+            this.Text = "List Organizer";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +166,7 @@
         private System.Windows.Forms.Button btnRemoveItem;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnReverseSort;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
