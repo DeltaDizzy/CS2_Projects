@@ -9,7 +9,7 @@ on: [push]
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     # This workflow contains a single job called "build"
-    Countdown:
+    Build Stopwatch:
     # The type of runner that the job will run on
         runs-on: windows-latest
 
@@ -26,10 +26,10 @@ jobs:
           uses: NuGet/setup-nuget@v1.0.2
 
         - name: Restore NuGet Packages
-          run: nuget restore FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln
+          run: nuget restore Stopwatch/Stopwatch.sln
           
         - name: Build App
-          run: msbuild FORLOOPSCHALLENGE/FORLOOPSCHALLENGE.sln /p:Configuration=Debug
+          run: msbuild Stopwatch/Stopwatch.sln /p:Configuration=Debug
 
         - name: Upload Artifact
           uses: actions/upload-artifact@v2.1.4
