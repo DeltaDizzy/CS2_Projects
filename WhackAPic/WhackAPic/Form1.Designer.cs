@@ -38,13 +38,13 @@
             this.lblStarter = new System.Windows.Forms.Label();
             this.tmrMover = new System.Windows.Forms.Timer(this.components);
             this.tmr = new System.Windows.Forms.Timer(this.components);
+            this.lblHighScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbMole)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbMole
             // 
-            this.pbMole.Image = global::WhackAPic.Properties.Resources.gopher;
             this.pbMole.Location = new System.Drawing.Point(0, 0);
             this.pbMole.Name = "pbMole";
             this.pbMole.Size = new System.Drawing.Size(117, 113);
@@ -57,6 +57,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblHighScore);
             this.panel1.Controls.Add(this.lblScore);
             this.panel1.Controls.Add(this.lblCountdown);
             this.panel1.Location = new System.Drawing.Point(0, 354);
@@ -68,7 +69,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Poplar Std", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(352, 39);
+            this.lblScore.Location = new System.Drawing.Point(389, 39);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(83, 39);
             this.lblScore.TabIndex = 1;
@@ -78,7 +79,7 @@
             // 
             this.lblCountdown.AutoSize = true;
             this.lblCountdown.Font = new System.Drawing.Font("Poplar Std", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountdown.Location = new System.Drawing.Point(12, 39);
+            this.lblCountdown.Location = new System.Drawing.Point(212, 39);
             this.lblCountdown.Name = "lblCountdown";
             this.lblCountdown.Size = new System.Drawing.Size(137, 39);
             this.lblCountdown.TabIndex = 0;
@@ -108,11 +109,21 @@
             // 
             this.tmrMover.Tick += new System.EventHandler(this.tmrMover_Tick);
             // 
+            // lblHighScore
+            // 
+            this.lblHighScore.AutoSize = true;
+            this.lblHighScore.Font = new System.Drawing.Font("Poplar Std", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighScore.Location = new System.Drawing.Point(3, 39);
+            this.lblHighScore.Name = "lblHighScore";
+            this.lblHighScore.Size = new System.Drawing.Size(132, 39);
+            this.lblHighScore.TabIndex = 2;
+            this.lblHighScore.Text = "High Score:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 450);
+            this.ClientSize = new System.Drawing.Size(559, 450);
             this.Controls.Add(this.lblStarter);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbMole);
@@ -139,6 +150,7 @@
         private System.Windows.Forms.Label lblStarter;
         private System.Windows.Forms.Timer tmrMover;
         private System.Windows.Forms.Timer tmr;
+        private System.Windows.Forms.Label lblHighScore;
     }
 }
 

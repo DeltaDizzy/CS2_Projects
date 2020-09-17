@@ -18,6 +18,9 @@ namespace WhackAPic
         Random r;
         int score = 0;
         int scoreKernel = 1;
+        Point loc;
+        Image blank;
+
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +39,7 @@ namespace WhackAPic
                 tmrGameTimer.Enabled = true;
                 tmrMover.Enabled = true;
                 lblStarter.Visible = false;
+                
                 lblStarter.Location = new Point(1000, 1000);
                 return;
             }
@@ -51,8 +55,13 @@ namespace WhackAPic
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            loc = lblStarter.Location;
             StartCountdown();
             r = new Random();
+            blank = pbMole.Image;
+            lblScore.Text = "Score: 0";
+            lblCountdown.Text = "Countdown: 30";
+            lblHighScore.Text = $"High Score: {Properties.Settings.Default.highscore}";
         }
 
         private void tmrGameTimer_Tick(object sender, EventArgs e)
@@ -93,10 +102,36 @@ namespace WhackAPic
 
         private void EndGame()
         {
+            if (score > Properties.Settings.Default.highscore)
+            {
+                Properties.Settings.Default.highscore = score;
+                Properties.Settings.Default.Save();
+                lblHighScore.Text = $"High Score: {Properties.Settings.Default.highscore}";
+            }
             tmrGameTimer.Enabled = false;
             tmrMover.Enabled = false;
-            lblStarter.Location = new Point(100, 100);
+            lblStarter.Location = loc;
+            lblStarter.Visible = true;
             lblStarter.Text = "Game Over!";
+            if (MessageBox.Show("Game Over!", "Would you like to restart?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ResetGame();
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
+
+        private void ResetGame()
+        {
+            gametimer = 30;
+            startcountdown = 3;
+            score = 0;
+            lblScore.Text = "Score: 0";
+            pbMole.Image = blank;
+            StartCountdown();
+            r = new Random();
         }
 
         private void pbMole_Click(object sender, EventArgs e)
