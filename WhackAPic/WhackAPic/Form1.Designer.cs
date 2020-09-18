@@ -29,30 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pbMole = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHighScore = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblCountdown = new System.Windows.Forms.Label();
             this.tmrGameTimer = new System.Windows.Forms.Timer(this.components);
             this.tmrStarter = new System.Windows.Forms.Timer(this.components);
             this.lblStarter = new System.Windows.Forms.Label();
             this.tmrMover = new System.Windows.Forms.Timer(this.components);
-            this.tmr = new System.Windows.Forms.Timer(this.components);
-            this.lblHighScore = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMole)).BeginInit();
+            this.pbMyth = new System.Windows.Forms.PictureBox();
+            this.pbMole = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMyth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMole)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbMole
-            // 
-            this.pbMole.Location = new System.Drawing.Point(0, 0);
-            this.pbMole.Name = "pbMole";
-            this.pbMole.Size = new System.Drawing.Size(117, 113);
-            this.pbMole.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMole.TabIndex = 0;
-            this.pbMole.TabStop = false;
-            this.pbMole.Click += new System.EventHandler(this.pbMole_Click);
-            this.pbMole.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbMole_MouseDown);
             // 
             // panel1
             // 
@@ -64,6 +54,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 98);
             this.panel1.TabIndex = 3;
+            // 
+            // lblHighScore
+            // 
+            this.lblHighScore.AutoSize = true;
+            this.lblHighScore.Font = new System.Drawing.Font("Poplar Std", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighScore.Location = new System.Drawing.Point(3, 39);
+            this.lblHighScore.Name = "lblHighScore";
+            this.lblHighScore.Size = new System.Drawing.Size(132, 39);
+            this.lblHighScore.TabIndex = 2;
+            this.lblHighScore.Text = "High Score:";
             // 
             // lblScore
             // 
@@ -109,21 +109,34 @@
             // 
             this.tmrMover.Tick += new System.EventHandler(this.tmrMover_Tick);
             // 
-            // lblHighScore
+            // pbMyth
             // 
-            this.lblHighScore.AutoSize = true;
-            this.lblHighScore.Font = new System.Drawing.Font("Poplar Std", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHighScore.Location = new System.Drawing.Point(3, 39);
-            this.lblHighScore.Name = "lblHighScore";
-            this.lblHighScore.Size = new System.Drawing.Size(132, 39);
-            this.lblHighScore.TabIndex = 2;
-            this.lblHighScore.Text = "High Score:";
+            this.pbMyth.Image = global::WhackAPic.Properties.Resources.wow;
+            this.pbMyth.Location = new System.Drawing.Point(396, 62);
+            this.pbMyth.Name = "pbMyth";
+            this.pbMyth.Size = new System.Drawing.Size(117, 113);
+            this.pbMyth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMyth.TabIndex = 4;
+            this.pbMyth.TabStop = false;
+            this.pbMyth.Click += new System.EventHandler(this.pbMyth_Click);
+            // 
+            // pbMole
+            // 
+            this.pbMole.Location = new System.Drawing.Point(0, 0);
+            this.pbMole.Name = "pbMole";
+            this.pbMole.Size = new System.Drawing.Size(117, 113);
+            this.pbMole.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMole.TabIndex = 0;
+            this.pbMole.TabStop = false;
+            this.pbMole.Click += new System.EventHandler(this.pbMole_Click);
+            this.pbMole.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbMole_MouseDown);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 450);
+            this.Controls.Add(this.pbMyth);
             this.Controls.Add(this.lblStarter);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbMole);
@@ -131,9 +144,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbMole)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMyth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMole)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,8 +163,8 @@
         private System.Windows.Forms.Timer tmrStarter;
         private System.Windows.Forms.Label lblStarter;
         private System.Windows.Forms.Timer tmrMover;
-        private System.Windows.Forms.Timer tmr;
         private System.Windows.Forms.Label lblHighScore;
+        private System.Windows.Forms.PictureBox pbMyth;
     }
 }
 

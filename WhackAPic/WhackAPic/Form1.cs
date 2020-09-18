@@ -20,7 +20,7 @@ namespace WhackAPic
         int scoreKernel = 1;
         Point loc;
         Image blank;
-
+        int mythtime = 0;
         public Form1()
         {
             InitializeComponent();
@@ -51,13 +51,14 @@ namespace WhackAPic
         private void StartCountdown()
         {
             tmrStarter.Enabled = true;
+            mythtime = r.Next(1, 31);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             loc = lblStarter.Location;
-            StartCountdown();
             r = new Random();
+            StartCountdown();
             blank = pbMole.Image;
             lblScore.Text = "Score: 0";
             lblCountdown.Text = "Countdown: 30";
@@ -68,6 +69,19 @@ namespace WhackAPic
         {
             gametimer -= 1;
             lblCountdown.Text = $"Countdown: {gametimer}";
+
+            if (gametimer == mythtime)
+            {
+                int x = r.Next(0, Width - pbMyth.Width);
+                int y = r.Next(0, Height - pbMyth.Height - panel1.Height);
+                pbMyth.Location = new Point(x, y);
+                pbMyth.Visible = true;
+            }
+            else
+            {
+                pbMyth.Visible = false;
+            }
+
             if (gametimer == 0)
             {
                 EndGame();
@@ -77,6 +91,7 @@ namespace WhackAPic
 
         private void UpdateImage()
         {
+            
             int picselect = r.Next(0, 3);
             switch (picselect)
             {
@@ -98,6 +113,7 @@ namespace WhackAPic
             int x = r.Next(0, Width - pbMole.Width);
             int y = r.Next(0, Height - pbMole.Height - panel1.Height);
             pbMole.Location = new Point(x, y);
+            
         }
 
         private void EndGame()
@@ -151,6 +167,15 @@ namespace WhackAPic
             if (tmrGameTimer.Enabled)
             {
                 score += scoreKernel;
+                lblScore.Text = $"Score: {score}";
+            }
+        }
+
+        private void pbMyth_Click(object sender, EventArgs e)
+        {
+            if (tmrGameTimer.Enabled)
+            {
+                score += 50;
                 lblScore.Text = $"Score: {score}";
             }
         }
