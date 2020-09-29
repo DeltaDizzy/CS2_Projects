@@ -86,13 +86,11 @@ namespace HardestGame
             }
 
             CheckCollisions(lblPlayer);
+            CheckCollisions(blue3);
+            CheckCollisions(blue1);
             MoveBlues();
-            for (int i = 0; i < blues.Count; i++)
-            {
-                CheckCollisions(blues[i]);
-            }
-            
-            
+
+
         }
 
         private void MoveBlues()
@@ -101,6 +99,7 @@ namespace HardestGame
             {
                 if (groupA.Contains(blues[i]))
                 {
+                    
                     // in group a
                     if (ALeft == true)
                     {
@@ -108,6 +107,7 @@ namespace HardestGame
                     }
                     else
                     {
+                        
                         blues[i].Left += bluespeed;
                     }
                 }

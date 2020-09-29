@@ -49,9 +49,9 @@
             this.lblPlayer.ForeColor = System.Drawing.Color.Red;
             this.lblPlayer.Location = new System.Drawing.Point(63, 30);
             this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(46, 17);
+            this.lblPlayer.Size = new System.Drawing.Size(16, 17);
             this.lblPlayer.TabIndex = 1;
-            this.lblPlayer.Text = "label1";
+            this.lblPlayer.Text = "a";
             // 
             // blue1
             // 
@@ -110,7 +110,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Location = new System.Drawing.Point(288, 291);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(529, 73);
+            this.panel3.Size = new System.Drawing.Size(523, 73);
             this.panel3.TabIndex = 8;
             // 
             // panel4
@@ -132,7 +132,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Location = new System.Drawing.Point(174, -7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(64, 300);
+            this.panel1.Size = new System.Drawing.Size(64, 301);
             this.panel1.TabIndex = 8;
             // 
             // tmrBlue
