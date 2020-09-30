@@ -39,7 +39,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tmrMovement = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tmrBlue = new System.Windows.Forms.Timer(this.components);
+            this.pnlEnd = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblPlayer
@@ -47,7 +47,7 @@
             this.lblPlayer.AutoSize = true;
             this.lblPlayer.BackColor = System.Drawing.Color.Red;
             this.lblPlayer.ForeColor = System.Drawing.Color.Red;
-            this.lblPlayer.Location = new System.Drawing.Point(63, 30);
+            this.lblPlayer.Location = new System.Drawing.Point(822, 21);
             this.lblPlayer.Name = "lblPlayer";
             this.lblPlayer.Size = new System.Drawing.Size(16, 17);
             this.lblPlayer.TabIndex = 1;
@@ -118,7 +118,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.Location = new System.Drawing.Point(808, 57);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(72, 304);
+            this.panel4.Size = new System.Drawing.Size(61, 304);
             this.panel4.TabIndex = 8;
             // 
             // tmrMovement
@@ -135,9 +135,13 @@
             this.panel1.Size = new System.Drawing.Size(64, 301);
             this.panel1.TabIndex = 8;
             // 
-            // tmrBlue
+            // pnlEnd
             // 
-            this.tmrBlue.Interval = 10;
+            this.pnlEnd.BackColor = System.Drawing.Color.PaleGreen;
+            this.pnlEnd.Location = new System.Drawing.Point(865, -6);
+            this.pnlEnd.Name = "pnlEnd";
+            this.pnlEnd.Size = new System.Drawing.Size(185, 367);
+            this.pnlEnd.TabIndex = 9;
             // 
             // Form1
             // 
@@ -146,6 +150,8 @@
             this.BackgroundImage = global::HardestGame.Properties.Resources.level1board;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1048, 355);
+            this.Controls.Add(this.lblPlayer);
+            this.Controls.Add(this.pnlEnd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -154,7 +160,6 @@
             this.Controls.Add(this.blue4);
             this.Controls.Add(this.blue2);
             this.Controls.Add(this.blue1);
-            this.Controls.Add(this.lblPlayer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -181,7 +186,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Timer tmrMovement;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Timer tmrBlue;
+        private System.Windows.Forms.Panel pnlEnd;
     }
 }
 

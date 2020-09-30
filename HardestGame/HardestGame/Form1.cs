@@ -19,6 +19,7 @@ namespace HardestGame
         List<Panel> walls = new List<Panel>();
         bool right, left, up, down = false;
         bool ALeft = true;
+        frm2 level2 = new frm2();
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -84,7 +85,7 @@ namespace HardestGame
             {
                 lblPlayer.Left -= speed;
             }
-
+            prev = lblPlayer.Location;
             CheckCollisions(lblPlayer);
             CheckCollisions(blue3);
             CheckCollisions(blue1);
@@ -133,7 +134,6 @@ namespace HardestGame
                 {
                     if (checker.Bounds.IntersectsWith(walls[i].Bounds))
                     {
-                        prev = new Point(checker.Location.X - speed, checker.Location.Y - speed);
                         checker.Location = prev;
                     }
                 }
@@ -145,6 +145,11 @@ namespace HardestGame
                         lblPlayer.Location = start;
                         lives -= 1;
                     }
+                }
+
+                if (lblPlayer.Bounds.IntersectsWith(pnlEnd.Bounds))
+                {
+                    LevelEnd(true);
                 }
             }
 
@@ -167,6 +172,23 @@ namespace HardestGame
             }
         }
 
+        private void LevelEnd(bool win)
+        {
+            tmrMovement.Enabled = false;
+            if (win)
+            {
+                DialogResult box = MessageBox.Show("You Win! Would you like to go to the next level (Yes) or quit (No)?", "Level Beat", MessageBoxButtons.YesNo);
+                if (box == DialogResult.Yes)
+                {
+                    this.Hide();
+                    level2.Show();
+                }
+                else if (box == DialogResult.No)
+                {
+                    Application.Exit();
+                }
+            }
+        }
         public Form1()
         {
             InitializeComponent();
@@ -188,6 +210,7 @@ namespace HardestGame
             groupB[1] = blue4;
 
             walls = this.Controls.OfType<Panel>().OrderBy(x => x.Name).ToList();
+            walls.Remove(pnlEnd);
             start = lblPlayer.Location;
         }
     }
