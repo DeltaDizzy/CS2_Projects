@@ -58,7 +58,6 @@
             // 
             // tmeMovement
             // 
-            this.tmeMovement.Enabled = true;
             this.tmeMovement.Tick += new System.EventHandler(this.tmeMovement_Tick);
             // 
             // blue1

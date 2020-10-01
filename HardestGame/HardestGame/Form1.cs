@@ -212,6 +212,7 @@ namespace HardestGame
             walls = this.Controls.OfType<Panel>().OrderBy(x => x.Name).ToList();
             walls.Remove(pnlEnd);
             start = lblPlayer.Location;
+            tmrMovement.Enabled = true;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace HardestGame
 {
     public partial class frm2 : Form
     {
-        List<Panel> walls = new List<Panel>();
+        List<Panel> frm2walls = new List<Panel>();
         List<Label> blues = new List<Label>();
         Label[] blueGroupA, blueGroupB;
         Point start, prev;
@@ -20,6 +20,7 @@ namespace HardestGame
         bool AUp = true;
         int bluespeed = 4;
         int playerspeed = 5;
+        int lives = 5;
 
         private void tmeMovement_Tick(object sender, EventArgs e) // tme was a typo
         {
@@ -50,9 +51,9 @@ namespace HardestGame
         {
             if (checker == lblPlayer)
             {
-                for (int i = 0; i < walls.Count; i++)
+                for (int i = 0; i < frm2walls.Count; i++)
                 {
-                    if (checker.Bounds.IntersectsWith(walls[i].Bounds))
+                    if (checker.Bounds.IntersectsWith(frm2walls[i].Bounds))
                     {
                         checker.Location = prev;
                     }
@@ -75,9 +76,9 @@ namespace HardestGame
 
             if (blues.Contains(checker))
             {
-                for (int i = 0; i < walls.Count; i++)
+                for (int i = 0; i < frm2walls.Count; i++)
                 {
-                    if (checker.Bounds.IntersectsWith(walls[i].Bounds))
+                    if (checker.Bounds.IntersectsWith(frm2walls[i].Bounds))
                     {
                         if (AUp == true)
                         {
@@ -147,7 +148,7 @@ namespace HardestGame
             }
         }
 
-        int lives = 5;
+        
         public frm2()
         {
             InitializeComponent();
@@ -209,10 +210,15 @@ namespace HardestGame
             blueGroupA[1] = blues[2];
             blueGroupB[1] = blues[3];
             blueGroupB[2] = blues[4];
-            //walls = this.Controls.OfType<Panel>().OrderBy(x => x.Name).ToList();
+            //frm2walls = this.Controls.OfType<Panel>().OrderBy(x => x.Name).ToList();
             //walls.Remove(pnlEndpoint);
-            walls.AddRange(new Panel[] { panel2, panel3, panel4, panel5, panel6 });
+            frm2walls.Add(panel2);
+            frm2walls.Add(panel3);
+            frm2walls.Add(panel4);
+            frm2walls.Add(panel5);
+            frm2walls.Add(panel6);
             start = lblPlayer.Location;
+            tmeMovement.Enabled = true;
         }
     }
 }
