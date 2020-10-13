@@ -37,22 +37,25 @@
             this.txtNumTickets = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuMenuBar
             // 
+            this.mnuMenuBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mnuMenuBar.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuMenuBar.Location = new System.Drawing.Point(0, 0);
             this.mnuMenuBar.Name = "mnuMenuBar";
-            this.mnuMenuBar.Size = new System.Drawing.Size(800, 30);
+            this.mnuMenuBar.Size = new System.Drawing.Size(800, 24);
             this.mnuMenuBar.TabIndex = 0;
             this.mnuMenuBar.Text = "menuStrip1";
             // 
             // btnPlayIt
             // 
             this.btnPlayIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayIt.Location = new System.Drawing.Point(42, 211);
+            this.btnPlayIt.Location = new System.Drawing.Point(42, 281);
             this.btnPlayIt.Name = "btnPlayIt";
             this.btnPlayIt.Size = new System.Drawing.Size(327, 72);
             this.btnPlayIt.TabIndex = 1;
@@ -105,7 +108,7 @@
             // txtNumTickets
             // 
             this.txtNumTickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumTickets.Location = new System.Drawing.Point(42, 165);
+            this.txtNumTickets.Location = new System.Drawing.Point(42, 241);
             this.txtNumTickets.Name = "txtNumTickets";
             this.txtNumTickets.Size = new System.Drawing.Size(327, 34);
             this.txtNumTickets.TabIndex = 0;
@@ -114,7 +117,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 118);
+            this.label1.Location = new System.Drawing.Point(34, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(351, 44);
             this.label1.TabIndex = 3;
@@ -124,17 +127,29 @@
             // 
             this.lblBalance.AutoSize = true;
             this.lblBalance.Font = new System.Drawing.Font("Myriad Hebrew", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(123, 315);
+            this.lblBalance.Location = new System.Drawing.Point(126, 402);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(156, 36);
             this.lblBalance.TabIndex = 4;
             this.lblBalance.Text = "Balance: $0";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Powerball.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(42, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(327, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -146,6 +161,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +178,7 @@
         private System.Windows.Forms.Label lblWhiteWinners;
         private System.Windows.Forms.Label lblRedWinner;
         private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
