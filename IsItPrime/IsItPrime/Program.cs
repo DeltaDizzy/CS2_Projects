@@ -13,6 +13,14 @@ namespace IsItPrime
         static List<string> loopPrimes = new List<string>();
         static void Main(string[] args)
         {
+            while(true)
+            {
+                RunProgram();
+            }
+        }
+
+        private static void RunProgram()
+        {
             factors.Add($"{1}");
             PostHeader();
 
@@ -38,10 +46,7 @@ namespace IsItPrime
                 DoFirstHundredPrimeStuff();
                 loopPrimes.Clear();
             }
-            
-            
         }
-
         private static void DoPrimeInputStuff()
         {
             numtotest = int.Parse(Console.ReadLine());
@@ -49,13 +54,13 @@ namespace IsItPrime
             if (prime)
             {
                 factors.Add($"{numtotest}, ");
-                Console.WriteLine($"\n{numtotest} is Prime!\nFactorization: {PrintStringList(factors)}\n");
+                Console.WriteLine($"\n{numtotest} is Prime!\n");
 
             }
             else
             {
                 factors.Add($"{numtotest}, ");
-                Console.WriteLine($"\n{numtotest} is NOT Prime!\nFactorization: {PrintStringList(factors)}\n");
+                Console.WriteLine($"\n{numtotest} is NOT Prime!\n");
             }
         }
 
@@ -81,15 +86,15 @@ namespace IsItPrime
 
         private static void DoFirstHundredPrimeStuff()
         {
-            bool prime = false;
-            for (int i = 0; i < 10000; i++)
+            bool prime;
+            for (int i = 0; i < 1000; i++)
             {
                 if (loopPrimes.Count > 100)
                 {
                     break;
                 }
 
-                if (i == 0)
+                if (i < 2)
                 {
                     continue;
                 }
