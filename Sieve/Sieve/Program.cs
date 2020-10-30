@@ -6,21 +6,17 @@ namespace Sieve
     class Program
     {
         static List<string> pairs = new List<string>();
+        static List<string> inverses = new List<string>();
         static void Main(string[] args)
         {
             for (int i = 0; i < 10000; i++)
             {
                 FindAmicableSet(i);
+                pairs.RemoveAll(p => inverses.Contains(p));
             }
             Console.WriteLine("\n\n");
             Console.ForegroundColor = ConsoleColor.Green;
-            for (int i = 0; i < pairs.Count; i++)
-            {
-                if (i % 2 != 0 && i > 0)
-                {
-                    pairs.RemoveAt(i);
-                }
-            }
+            
             foreach (string pair in pairs)
             {
                 Console.WriteLine(pair);
@@ -46,16 +42,22 @@ namespace Sieve
         {
             
             int startNumFactorSum = FindFactorSum(startNum);
-            if (startNum == FindFactorSum(startNumFactorSum) && startNum != startNumFactorSum)
+            int startNumFactorSumFactorSum = FindFactorSum(startNumFactorSum);
+            if (startNum == startNumFactorSumFactorSum && startNum != startNumFactorSum)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
+                if(startNum > startNumFactorSum)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    goto writepair;
+                }
                 pairs.Add($"({startNum}), ({startNumFactorSum})");
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
             }
-            Console.WriteLine($"({startNum}), ({FindFactorSum(startNumFactorSum)})");
+            writepair:  Console.WriteLine($"({startNum}) ({startNumFactorSumFactorSum})");
             Console.ResetColor();
         }
     }
