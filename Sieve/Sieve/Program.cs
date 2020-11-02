@@ -6,13 +6,11 @@ namespace Sieve
     class Program
     {
         static List<string> pairs = new List<string>();
-        static List<string> inverses = new List<string>();
         static void Main(string[] args)
         {
             for (int i = 0; i < 10000; i++)
             {
                 FindAmicableSet(i);
-                pairs.RemoveAll(p => inverses.Contains(p));
             }
             Console.WriteLine("\n\n");
             Console.ForegroundColor = ConsoleColor.Green;
@@ -40,7 +38,6 @@ namespace Sieve
 
         private static void FindAmicableSet(int startNum)
         {
-            
             int startNumFactorSum = FindFactorSum(startNum);
             int startNumFactorSumFactorSum = FindFactorSum(startNumFactorSum);
             if (startNum == startNumFactorSumFactorSum && startNum != startNumFactorSum)
