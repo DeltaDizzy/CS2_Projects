@@ -1,15 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Box CIpher
+name: Amicable
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on: [workflow-dispatch]
+on: [workflow_dispatch]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     # This workflow contains a single job called "build"
-    Build_Ciphers:
+    Amicable:
     # The type of runner that the job will run on
         runs-on: windows-latest
 
@@ -26,13 +26,13 @@ jobs:
           uses: NuGet/setup-nuget@v1.0.2
 
         - name: Restore NuGet Packages
-          run: nuget restore Ciphers/Ciphers.sln
+          run: nuget restore Sieve/Sieve.sln
           
         - name: Build App
-          run: msbuild Ciphers/Ciphers.sln /p:Configuration=Debug
+          run: msbuild Sieve/Sieve.sln /p:Configuration=Debug
 
-        - name: Upload Artifact
+        - name: Upload Artifact [OBJ]
           uses: actions/upload-artifact@v2.1.4
           with: 
-            name: Countdown.exe
-            path: Ciphers/Ciphers/obj/Debug/Ciphers.exe
+            name: Primes-OBJ.exe
+            path: Sieve/Sieve/obj/Debug/netcoreapp3.1/Sieve.exe
