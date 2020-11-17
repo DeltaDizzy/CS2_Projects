@@ -25,7 +25,7 @@ jobs:
               dotnet-version: 3.1.x
 
         - name: Install Dependencies
-          run: dir
+          run: dotnet restore Parsiey/Parsiey.sln
           
         - name: Build
           run: dotnet build --configuration Release --no-restore
