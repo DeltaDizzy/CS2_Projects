@@ -25,7 +25,7 @@ jobs:
               dotnet-version: 3.1.x
 
         - name: Install Dependencies
-          run: dotnet restore
+          run: dir
           
         - name: Build
           run: dotnet build --configuration Release --no-restore
