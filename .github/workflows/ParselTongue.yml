@@ -28,7 +28,7 @@ jobs:
           run: dotnet restore Parsiey/Parsiey.sln
           
         - name: Build
-          run: dotnet build --configuration Release --no-restore
+          run: dotnet build Parsiey/Parsiey.sln --configuration Release --no-restore
 
         - name: Upload Artifact
           uses: actions/upload-artifact@v2.1.4
