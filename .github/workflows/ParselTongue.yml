@@ -20,13 +20,13 @@ jobs:
           name: Checkout Code
           
         - name: Setup MSBuild Path
-          uses: warrenbuckley/Setup-MSBuild@v1
+          uses: microsoft/Setup-MSBuild@v1
 
         - name: Setup NuGet
           uses: NuGet/setup-nuget@v1.0.2
 
         - name: Restore NuGet Packages
-          run: nuget restore Sieve/Sieve.sln
+          run: nuget restore Parsiey/Parsiey.sln
           
         - name: Build App
           run: msbuild Parsiey/Parsiey.sln /p:Configuration=Debug
@@ -34,5 +34,5 @@ jobs:
         - name: Upload Artifact [OBJ]
           uses: actions/upload-artifact@v2.1.4
           with: 
-            name: Primes-OBJ.exe
+            name: ParselTongue.exe
             path: Parsiey/Parsiey/obj/Debug/netcoreapp3.1/Parsiey.exe
