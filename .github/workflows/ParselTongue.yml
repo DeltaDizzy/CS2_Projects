@@ -33,5 +33,5 @@ jobs:
         - name: Upload Artifact
           uses: actions/upload-artifact@v2.1.4
           with: 
-            name: ParselTongue.exe
-            path: Parsiey/Parsiey/obj/Debug/netcoreapp3.1/Parsiey.exe
+            name: Parsiey.exe
+            path: Parsiey/Parsiey/obj/Debug/netcoreapp3.1/
