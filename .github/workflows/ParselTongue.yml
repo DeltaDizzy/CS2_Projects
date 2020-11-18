@@ -34,4 +34,4 @@ jobs:
           uses: actions/upload-artifact@v2.1.4
           with: 
             name: Parsiey.exe
-            path: Parsiey/Parsiey/obj/Debug/netcoreapp3.1/
+            path: Parsiey/Parsiey/obj/Debug/netcoreapp3.1/Parsiey.exe
