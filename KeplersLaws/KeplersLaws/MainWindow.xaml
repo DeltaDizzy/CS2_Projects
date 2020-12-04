@@ -8,8 +8,46 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid x:Name="RootGrid">
-            <Button x:Name="btnSpawn" Content="Button" Margin="607,382,0,0" Click="btnSpawn_Click"/>
-        </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4.5*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Canvas x:Name="cnvViewer" Grid.Column="0" Grid.Row="0" Background="Aquamarine"/>
+            <Grid x:Name="grdControls" Grid.Column="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.75*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="pnlEccentricityControl" Grid.Row="1" Grid.Column="0" Background="BlanchedAlmond">
+                    <Label Content="Eccentricity" Width="Auto" HorizontalContentAlignment="Center"/>
+                    <Slider x:Name="sldEccentricity" Maximum="0.99" Minimum="0" TickFrequency="0.1" TickPlacement="TopLeft"/>
+                    <Label Content="{Binding Value, ElementName=sldEccentricity}" Width="Auto" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel x:Name="pnlSMAControl" Grid.Row="1" Grid.Column="1" Background="CadetBlue">
+                    <Label Content="Semi-Major Axis" Width="Auto" HorizontalContentAlignment="Center"/>
+                    <Slider x:Name="sldSMA" Minimum="0" Maximum="100000" TickPlacement="TopLeft"/>
+                    <Label Content="{Binding Value, ElementName=sldSMA}" Width="Auto" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel x:Name="pnlArgofPeControl" Grid.Row="1" Grid.Column="2" Background="CadetBlue">
+                    <Label Content="Argument of Periapsis" Width="Auto" HorizontalContentAlignment="Center"/>
+                    <Slider x:Name="sldArgofPe" Minimum="0" Maximum="360" TickFrequency="0.1" TickPlacement="TopLeft"/>
+                    <Label Content="{Binding Value, ElementName=sldArgofPe}" Width="Auto" HorizontalContentAlignment="Center"/>
+                </StackPanel>
 
+            </Grid>
+            
+            <StackPanel x:Name="pnlReadouts" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Background="Cyan">
+                
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </Window>

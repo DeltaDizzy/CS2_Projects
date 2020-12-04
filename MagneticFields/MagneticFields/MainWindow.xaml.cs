@@ -10,11 +10,10 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KeplersLaws
+namespace MagneticFields
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,25 +24,5 @@ namespace KeplersLaws
         {
             InitializeComponent();
         }
-
-        #region Drawing Shapes
-        private void DrawEllipse(Brush stroke, int thickness, int x, int y, int height, int width, string name)
-        {
-            Ellipse ellipse = new Ellipse();
-            ellipse.StrokeThickness = thickness;
-            ellipse.Height = height;
-            ellipse.Width = width;
-            ellipse.Stroke = stroke;
-            ellipse.Name = name;
-            RootGrid.Children.Add(ellipse);
-        }
-        #endregion
     }
 }
-
-/*
- * SMA
- * Eccentricity
- * Argument of Periapsis
- * True Anomaly
- */
