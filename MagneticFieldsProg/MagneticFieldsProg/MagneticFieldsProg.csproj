@@ -63,8 +63,11 @@
     </Compile>
     <Compile Include="Interface1.cs" />
     <Compile Include="LatticePoint.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerPhysicsState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shape.cs" />
     <Compile Include="VectorField.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
