@@ -81,39 +81,10 @@ namespace MagneticFieldsProg
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            p.Mass = 1;
-            p.Position = new Vector2(pbRory.Location.X, pbRory.Location.Y);
-            //pbRory.Location = new Point((int)p.Position.X, (int)p.Position.Y);
         }
 
         private void Form1_KeyDown_1(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.Space:
-                    if (p.Velocity.Y == 0)
-                    {
-                        p.Force += new Vector2(0, -5);
-                    }
-                    break;
-                case Keys.Left:
-                    p.Force += new Vector2(-1, 0);
-                    break;
-                case Keys.Right:
-                    p.Force += new Vector2(1, 0);
-                    break;
-                case Keys.A:
-                    p.Force += new Vector2(-1, 0);
-                    break;
-                case Keys.D:
-                    p.Force += new Vector2(1, 0);
-                    break;
-                case Keys.LShiftKey:
-                    p.Charged = true;
-                    break;
-                default:
-                    break;
-            }
         }
 
         private void Form1_Layout(object sender, LayoutEventArgs e)
@@ -123,49 +94,10 @@ namespace MagneticFieldsProg
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.LShiftKey)
-            {
-                p.Charged = false;
-            }
         }
 
         private void tmrIntegrator_Tick(object sender, EventArgs e)
         {
-            label1.Text = $"{p.Force.X}, {p.Force.Y}";
-            oldpos = p.Position;
-            if (p.Charged)
-            {
-                p.Force += E.ForceAtPosition(p.Position);
-            }
-            
-            Vector2 acceleration = p.Force / (float)p.Mass;
-            
-            acceleration.Y += 9.80f;
-            p.Velocity += acceleration * deltaTime; 
-            
-            p.Position += p.Velocity * deltaTime;
-            if (p.Position.Y+pbRory.Height > this.ClientSize.Height)
-            {
-                p.Position = new Vector2(p.Position.X, Height-pbRory.Height);
-                
-            }
-            if (p.Position.X < 0)
-            {
-                p.Position = new Vector2(Width, p.Position.Y);
-            }
-            if (p.Position.X > Width)
-            {
-                p.Position = new Vector2(0, p.Position.Y);
-            }
-            Console.WriteLine($"p = <{p.Position.X}, {p.Position.Y}>");
-            Console.WriteLine($"v = <{p.Velocity.X}, {p.Velocity.Y}>");
-            Console.WriteLine($"a = <{acceleration.X}, {acceleration.Y}>");
-            Console.WriteLine($"f = <{p.Force.X}, {p.Force.Y}>");
-            Console.WriteLine($"c = {p.Charged}");
-            pbRory.Location = new Point((int)p.Position.X, (int)p.Position.Y);
-            p.Force = Vector2.Zero;
-            p.Velocity = Vector2.Zero;
-            pbRory.BringToFront();
 
         }
         #endregion

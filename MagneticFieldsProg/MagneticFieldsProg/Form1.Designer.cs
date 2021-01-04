@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tmrIntegrator = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbRory = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRory)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrIntegrator
@@ -49,15 +46,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(983, 24);
             this.panel1.TabIndex = 0;
-            // 
-            // pbRory
-            // 
-            this.pbRory.Image = ((System.Drawing.Image)(resources.GetObject("pbRory.Image")));
-            this.pbRory.Location = new System.Drawing.Point(179, 132);
-            this.pbRory.Name = "pbRory";
-            this.pbRory.Size = new System.Drawing.Size(609, 328);
-            this.pbRory.TabIndex = 0;
-            this.pbRory.TabStop = false;
             // 
             // label1
             // 
@@ -74,7 +62,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 953);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbRory);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -83,7 +70,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Form1_Layout);
-            ((System.ComponentModel.ISupportInitialize)(this.pbRory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,7 +79,6 @@
 
         private System.Windows.Forms.Timer tmrIntegrator;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbRory;
         private System.Windows.Forms.Label label1;
     }
 }
