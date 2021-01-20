@@ -18,7 +18,7 @@ namespace MagneticFieldsProg
         Player p = new Player(new PlayerPhysicsState());
         float deltaTime = 0.01f;
         VectorField E, B;
-        List<Charge> charges = new List<Charge> { new Charge(true, 10, 10, 5), new Charge(false, 20, 20, 5) };
+        List<Charge> charges = new List<Charge> { new Charge(true, 30, 30, 5)};
         Vector2 oldpos;
         public Form1()
         {
@@ -60,7 +60,8 @@ namespace MagneticFieldsProg
             }
 
             //VectorField.SetFieldVectors(E.Field, E.Charges);
-            VectorField.SetUniform(45, 1, E, Width, 0);
+
+            VectorField.SetUniform(200, 1, E, Width, 0);
 
         }
 
